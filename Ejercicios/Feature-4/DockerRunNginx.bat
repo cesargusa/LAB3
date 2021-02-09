@@ -1,0 +1,1 @@
+docker run -d -p 2021:80 --name nginx my-app
