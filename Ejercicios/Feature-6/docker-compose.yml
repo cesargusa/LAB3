@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+    app:
+        image: my-app
+        container_name: web_docker_compose
+        ports:
+            - "2222:80"
+    netapplication:
+        image: testimage
+        container_name: net_docker_compose
+        ports:
+            - "8989:80"
+    db:
+        container_name: db_docker_compose
+        image: mcr.microsoft.com/mssql/server:2019-latest
+        environment:
+            SA_PASSWORD: "yourStrong(!)Password."
+            ACCEPT_EULA: "Y"
+        ports:
+            - "1433:1433"
+        volumes: 
+            - D:\volumedb:/var/opt/mssql
+   
