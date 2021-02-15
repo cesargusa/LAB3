@@ -1,0 +1,1 @@
+docker run -p 8989:80 --name netapplication testimage
